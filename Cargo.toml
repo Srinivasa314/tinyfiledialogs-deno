@@ -1,0 +1,16 @@
+[package]
+name = "tinyfiledialogs-deno"
+version = "0.1.0"
+authors = ["Srinivasa <m.srinivasa1234@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+calcite = "^0"
+tinyfiledialogs = "^3"
+deno_core = "^0"
+serde = "^1"
+serde_repr = "^0"
+serde_derive = "^1"
+
+[lib]
+crate-type = ["cdylib"]
