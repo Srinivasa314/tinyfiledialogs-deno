@@ -16,7 +16,7 @@ import {
   selectFolderDialog,
 } from "./tinyfiledialogs.ts";
 
-console.log(colorChooserDialog("Choose a Color", [255, 0, 0]));
+console.log(colorChooserDialog("Choose a Color","#FF0000"));
 
 console.log(inputBox("Enter user name", "Username:", "username"));
 
