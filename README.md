@@ -7,5 +7,5 @@ It requires --unstable --allow-plugin --allow-net --allow-read --allow-write (be
 ## Example
 ```ts
 import * as tinyfiledialogs from "https://deno.land/x/tinyfiledialogs@1.0/mod.ts"
-tinyfiledialogs.messageBoxOk("Content", "Title", tinyfiledialogs.MessageBoxIcon.Info)
+tinyfiledialogs.messageBoxOk("Title", "Content", tinyfiledialogs.MessageBoxIcon.Info)
 ```
