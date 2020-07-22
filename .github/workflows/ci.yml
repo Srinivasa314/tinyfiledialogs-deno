@@ -23,9 +23,10 @@ jobs:
          ~/.cargo/git
          target
         key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
-    - uses: denolib/setup-deno@v2
+    - name: Run update
+      uses: actions-rs/cargo@v1
       with:
-        deno-version: v1.x      
+        command: update
     - name: Run build
       uses: actions-rs/cargo@v1
       with:
@@ -34,9 +35,6 @@ jobs:
     - name: Strip binary linux
       if: matrix.os == 'ubuntu-latest'
       run: strip target/release/libtinyfiledialogs_deno.so
-    - name: Strip binary macos
-      if: matrix.os == 'macos-latest'
-      run: strip target/release/libtinyfiledialogs_deno.dylib
     - name: Release Plugin
       uses: softprops/action-gh-release@master
       env:
