@@ -98,15 +98,20 @@ pub fn input_box(title: &str, message: &str, default: &str) -> Option<String> {
 }
 
 #[calcite::deno_op]
-pub fn list_dialog(title: &str, columns: Vec<&str>, cells: Option<Vec<&str>>) -> Option<String> {
+pub fn list_dialog(
+    title: &str,
+    columns: Vec<&str>,
+    cells: Option<Vec<Vec<&str>>>,
+) -> Option<Vec<String>> {
     tinyfiledialogs::list_dialog(
         title,
         &columns,
-        match cells {
-            Some(ref s) => Some(&s),
-            None => None,
-        },
+        cells
+            .map(|s| s.into_iter().flatten().collect::<Vec<_>>())
+            .as_ref()
+            .map(|v| &v[..]),
     )
+    .map(|s| s.split('|').map(|s| s.to_string()).collect())
 }
 
 #[calcite::deno_op]

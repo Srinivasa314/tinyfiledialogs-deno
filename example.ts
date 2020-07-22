@@ -24,7 +24,7 @@ console.log(
   listDialog(
     "Test Dialog",
     ["Id", "Name"],
-    ["471", "Donald Duck", "1143", "Chris P. Bacon", "6509", "Moon Doge"],
+    [["471", "Donald Duck"],[ "1143", "Chris P. Bacon"], ["6509", "Moon Doge"]],
   ),
 );
 
