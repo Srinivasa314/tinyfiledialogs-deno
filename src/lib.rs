@@ -148,10 +148,7 @@ pub fn open_file_dialog(
     tinyfiledialogs::open_file_dialog(
         title,
         path,
-        match filter {
-            Some((ref a, b)) => Some((&a, b)),
-            None => None,
-        },
+        filter.as_ref().map(|(a, b)| (a.as_slice(), *b)),
     )
 }
 
@@ -164,10 +161,7 @@ pub fn open_file_dialog_multi(
     tinyfiledialogs::open_file_dialog_multi(
         title,
         path,
-        match filter {
-            Some((ref a, b)) => Some((&a, b)),
-            None => None,
-        },
+        filter.as_ref().map(|(a, b)| (a.as_slice(), *b)),
     )
 }
 
