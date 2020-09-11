@@ -1,7 +1,7 @@
 import {
   loadPlugin,
   importFromPlugin,
-U} from "https://deno.land/x/calcite@2.2/calcite.ts";
+} from "https://deno.land/x/calcite@2.2/calcite.ts";
 
 await loadPlugin("tinyfiledialogs_deno", "https://github.com/Srinivasa314/tinyfiledialogs-deno/releases/download/1.0.3");
 
