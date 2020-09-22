@@ -3,7 +3,7 @@ import {
   importFromPlugin,
 } from "https://deno.land/x/calcite@2.3/calcite.ts";
 
-await loadPlugin("tinyfiledialogs_deno", "https://github.com/Srinivasa314/tinyfiledialogs-deno/releases/download/1.0.4");
+await loadPlugin("tinyfiledialogs_deno", "https://github.com/Srinivasa314/tinyfiledialogs-deno/releases/download/1.0.5");
 
 export enum MessageBoxIcon {
   Info,
