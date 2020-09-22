@@ -14,7 +14,7 @@ import {
   saveFileDialog,
   saveFileDialogWithFilter,
   selectFolderDialog,
-} from "https://deno.land/x/tinyfiledialogs@1.0.3/mod.ts";
+} from "https://deno.land/x/tinyfiledialogs@1.0.5/mod.ts";
 
 console.log(colorChooserDialog("Choose a Color","#FF0000"));
 
