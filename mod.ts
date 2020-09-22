@@ -1,9 +1,9 @@
 import {
   loadPlugin,
   importFromPlugin,
-} from "https://deno.land/x/calcite@2.2/calcite.ts";
+} from "https://deno.land/x/calcite@2.3/calcite.ts";
 
-await loadPlugin("tinyfiledialogs_deno", "https://github.com/Srinivasa314/tinyfiledialogs-deno/releases/download/1.0.3");
+await loadPlugin("tinyfiledialogs_deno", "https://github.com/Srinivasa314/tinyfiledialogs-deno/releases/download/1.0.4");
 
 export enum MessageBoxIcon {
   Info,
